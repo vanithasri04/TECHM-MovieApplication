@@ -1,0 +1,50 @@
+<div style="background-color: #333; color: white; padding: 15px;">
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    
+    <!-- Home Button -->
+    <button (click)="goToHome()" style="padding: 8px 16px; background-color: transparent; color: white; border: 1px solid white; border-radius: 4px;">
+      Home
+    </button>
+
+    <!-- App Title -->
+    <div style="font-size: 28px; font-weight: bold; color: white;">
+      Movie Recommendation App
+    </div>
+
+    <!-- Empty div to balance spacing -->
+    <div style="width: 75px;"></div>
+</div>
+</div>
+
+
+
+<h2>Signup Page</h2>
+<div style="text-align: left;">
+  <button (click)="goToHome()">Back to Home</button>
+</div>
+<form #signupForm="ngForm">
+  
+  <label for="username">User Name:</label>
+  <input type="text" id="username" placeholder="Enter your username" [(ngModel)]="username"  required />
+
+  <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" [(ngModel)]="email" required pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$"
+    #emailRef="ngModel">
+    <div *ngIf="emailRef.invalid && emailRef.touched" style="color: red;">
+      <div *ngIf="emailRef.errors?.['pattern']">Only &#64;gmail.com emails are allowed</div>
+      <div *ngIf="emailRef.errors?.['required']">Email is required</div>
+    </div>
+  
+  <label for="password">Password:</label>
+  <input type="password" id="password" placeholder="Enter your password" [(ngModel)]="password" name="password" required>
+
+ 
+  
+  
+  <button  (click)="signup()" [disabled]="!signupForm.form.valid" >Sign Up</button>
+  <div style="text-align: center;">
+  <p>already have an account? 
+  <button (click)="signup()">Login to My Account </button></p>
+  </div>
+</form>
+

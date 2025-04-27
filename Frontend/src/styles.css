@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #f8f9fa; /* Light gray background */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Center headings and add spacing */
+  h1, h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Style buttons */
+  button {
+    background-color: #007bff; /* Bootstrap blue */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Align buttons in the center */
+  .button-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Style input fields */
+  input {
+    padding: 8px;
+    width: 80%;
+    max-width: 300px;
+    margin: 10px auto;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
